@@ -16,9 +16,21 @@ namespace CapsCounter
 
         protected void CountCaps_Click(object sender, EventArgs e)
         {
-            UserText.Enabled = false;
-            int caps = Model.TextAnalyzer.GetNumberOfCapitals(UserText.Text);
-            CountResult.Text = String.Format("Versaler: {0}", caps);
+            if (UserText.Enabled)
+            {
+                UserText.Enabled = false;
+                int caps = Model.TextAnalyzer.GetNumberOfCapitals(UserText.Text);
+                CountResult.Text = String.Format("Texten innehåller {0} versaler.", caps);
+                CountResult.Visible = true;
+                CountCaps.Text = "Rensa";
+            }
+            else
+            {
+                UserText.Enabled = true;
+                UserText.Text = "";
+                CountResult.Visible = false;
+                CountCaps.Text = "Bestäm antalet versaler";
+            }
         }
     }
 }
