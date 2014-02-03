@@ -13,5 +13,12 @@ namespace CapsCounter
         {
 
         }
+
+        protected void CountCaps_Click(object sender, EventArgs e)
+        {
+            UserText.Enabled = false;
+            int caps = Model.TextAnalyzer.GetNumberOfCapitals(UserText.Text);
+            CountResult.Text = String.Format("Versaler: {0}", caps);
+        }
     }
 }
