@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CapsCounter.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CapsCounter.Default" ViewStateMode="Disabled" %>
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
     <div>
         <h1>Hur många versaler?</h1>
         <div>
-            <asp:TextBox ID="UserText" runat="server" TextMode="MultiLine"></asp:TextBox>
+            <asp:TextBox ID="UserText" runat="server" TextMode="MultiLine" ViewStateMode="Enabled"></asp:TextBox>
         </div>
         <asp:Label ID="CountResult" runat="server" Text="Label" Visible="false"></asp:Label>
         <div>
