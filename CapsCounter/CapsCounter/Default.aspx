@@ -9,7 +9,9 @@
     <form id="form1" runat="server">
     <div>
         <h1>Hur många versaler?</h1>
-        <asp:TextBox ID="UserText" runat="server" TextMode="MultiLine"></asp:TextBox>
+        <div>
+            <asp:TextBox ID="UserText" runat="server" TextMode="MultiLine"></asp:TextBox>
+        </div>
         <asp:Label ID="CountResult" runat="server" Text="Label" Visible="false"></asp:Label>
         <div>
             <asp:Button ID="CountCaps" runat="server" Text="Bestäm antalet versaler" OnClick="CountCaps_Click" />
