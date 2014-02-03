@@ -10,7 +10,7 @@
     <div>
         <h1>Hur många versaler?</h1>
         <asp:TextBox ID="UserText" runat="server" TextMode="MultiLine"></asp:TextBox>
-        <asp:Button ID="CountCaps" runat="server" Text="Button" />
+        <asp:Button ID="CountCaps" runat="server" Text="Räkna versaler" />
     </div>
     </form>
 </body>
