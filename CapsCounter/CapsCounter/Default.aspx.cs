@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CapsCounter.Model;
 
 namespace CapsCounter
 {
@@ -19,7 +20,7 @@ namespace CapsCounter
             if (UserText.Enabled)
             {
                 UserText.Enabled = false;
-                int caps = Model.TextAnalyzer.GetNumberOfCapitals(UserText.Text);
+                int caps = TextAnalyzer.GetNumberOfCapitals(UserText.Text);
                 CountResult.Text = String.Format("Texten innehåller {0} versaler.", caps);
                 CountResult.Visible = true;
                 CountCaps.Text = "Rensa";
